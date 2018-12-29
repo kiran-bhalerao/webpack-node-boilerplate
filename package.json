@@ -2,18 +2,21 @@
   "name": "mywebpack",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "webpack && node dist/main",
-    "dev": "webpack --watch"
+    "start": "env-cmd .env node dist/main",
+    "build": "webpack",
+    "dev": "env-cmd .env webpack --watch"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "kiran bhalerao",
+  "license": "MIT",
   "devDependencies": {
+    "env-cmd": "^8.0.2",
     "nodemon": "^1.18.6",
     "nodemon-webpack-plugin": "^4.0.3",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.1"
+    "webpack-cli": "^3.1.1",
+    "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
     "express": "^4.16.4",
